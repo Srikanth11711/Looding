@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        /* box-sizing: border-box; */
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+       top: 50%;
+       left:50%;
+       transform: translate(-50%,-50%);
+    }
+    .container div{
+       margin: auto;
+       height: 15px;
+       width: 15px;
+       margin: 20px;
+       border-radius: 50%;
+       background-color: black;
+       
+        
+    }
+    .box1{
+        animation:move1 2s infinite ease forwards; 
+    }
+    .box2{
+        animation:move2 2s infinite ease-in forwards; 
+        animation-delay: 1s; 
+    }
+    .box3{
+        
+        animation:move3 2s infinite ease-in forwards; 
+        animation-delay: 2s ;
+        
+
+    }
+
+    @keyframes move2{
+
+        0%{transform: translatex(0px);}
+        50%{transform: translatex(45px);background-color: red;}
+        75%{transform: translateX(45px);}
+    }
+    @keyframes move1{
+
+        0%{transform: translatex(0px);}
+        50%{transform: translatex(45px);background-color:blue;}
+        75%{transform: translateX(45px);}
+}
+
+@keyframes move3 {
+    0%{transform: translatex(0px);}
+        50%{transform: translatex(45px);background-color:greenyellow;}
+        75%{transform: translateX(45px);}
+}
+</style>
+</html>
